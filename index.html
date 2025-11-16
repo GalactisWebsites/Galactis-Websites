@@ -421,7 +421,7 @@
 
     <section id="contact">
         <h2>Get A Quote</h2>
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xpwkjpwo" method="POST">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -472,13 +472,33 @@
         // Form submission
         const contactForm = document.getElementById('contactForm');
         const formMessage = document.getElementById('formMessage');
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            formMessage.textContent = 'Thank you! Your message has been received. We\'ll get back to you soon.';
-            formMessage.className = 'form-message success';
-            formMessage.style.display = 'block';
-            contactForm.reset();
+            const formData = new FormData(contactForm);
+            
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+                
+                if (response.ok) {
+                    formMessage.textContent = 'Thank you! Your message has been sent. We\'ll get back to you soon.';
+                    formMessage.className = 'form-message success';
+                    formMessage.style.display = 'block';
+                    contactForm.reset();
+                } else {
+                    formMessage.textContent = 'Oops! There was a problem. Please try again.';
+                    formMessage.className = 'form-message error';
+                    formMessage.style.display = 'block';
+                }
+            } catch (error) {
+                formMessage.textContent = 'Oops! There was a problem. Please try again.';
+                formMessage.className = 'form-message error';
+                formMessage.style.display = 'block';
+            }
             
             setTimeout(() => {
                 formMessage.style.display = 'none';
