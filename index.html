@@ -18,8 +18,8 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a1628 0%, #1a2742 50%, #0a1628 100%);
-            color: #fff;
+            background: linear-gradient(135deg, #000000 0%, #1a2a4a 50%, #000000 100%);
+            color: #ffffff;
             overflow-x: hidden;
         }
 
@@ -52,11 +52,11 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 22, 40, 0.95);
+            background: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(10px);
             padding: 1.5rem 5%;
             z-index: 1000;
-            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(26, 42, 74, 0.5);
         }
 
         .nav-content {
@@ -70,7 +70,7 @@
         .logo-text {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #00ffff;
+            color: #4a7bc8;
             letter-spacing: 2px;
         }
 
@@ -88,7 +88,7 @@
         }
 
         .nav-links a:hover {
-            color: #00ffff;
+            color: #4a7bc8;
         }
 
         .menu-toggle {
@@ -101,7 +101,7 @@
         .menu-toggle span {
             width: 25px;
             height: 3px;
-            background: #00ffff;
+            background: #4a7bc8;
             transition: 0.3s;
         }
 
@@ -128,10 +128,11 @@
             animation: float 6s ease-in-out infinite;
         }
 
-        .logo-container svg {
+        .logo-container img {
             width: 100%;
             height: 100%;
-            filter: drop-shadow(0 0 30px rgba(0, 255, 255, 0.5));
+            object-fit: contain;
+            filter: drop-shadow(0 0 30px rgba(74, 123, 200, 0.6));
         }
 
         @keyframes float {
@@ -153,7 +154,7 @@
         h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #00ffff, #0099ff);
+            background: linear-gradient(135deg, #4a7bc8, #6a9bdb);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -168,19 +169,19 @@
         .cta-button {
             display: inline-block;
             padding: 1rem 2.5rem;
-            background: linear-gradient(135deg, #00ffff, #0099ff);
-            color: #0a1628;
+            background: linear-gradient(135deg, #4a7bc8, #6a9bdb);
+            color: #000000;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
             font-size: 1.1rem;
             transition: all 0.3s;
-            box-shadow: 0 5px 20px rgba(0, 255, 255, 0.3);
+            box-shadow: 0 5px 20px rgba(74, 123, 200, 0.4);
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(0, 255, 255, 0.5);
+            box-shadow: 0 8px 30px rgba(74, 123, 200, 0.6);
         }
 
         section {
@@ -195,7 +196,7 @@
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 3rem;
-            color: #00ffff;
+            color: #4a7bc8;
         }
 
         .services-grid {
@@ -205,19 +206,19 @@
         }
 
         .service-card {
-            background: rgba(26, 39, 66, 0.6);
+            background: rgba(26, 42, 74, 0.4);
             backdrop-filter: blur(10px);
             padding: 2rem;
             border-radius: 15px;
-            border: 1px solid rgba(0, 255, 255, 0.2);
+            border: 1px solid rgba(74, 123, 200, 0.3);
             transition: all 0.3s;
             cursor: pointer;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            border-color: rgba(0, 255, 255, 0.6);
-            box-shadow: 0 10px 40px rgba(0, 255, 255, 0.2);
+            border-color: rgba(74, 123, 200, 0.7);
+            box-shadow: 0 10px 40px rgba(74, 123, 200, 0.3);
         }
 
         .service-icon {
@@ -226,7 +227,7 @@
         }
 
         .service-card h3 {
-            color: #00ffff;
+            color: #4a7bc8;
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
@@ -239,11 +240,11 @@
         .contact-form {
             max-width: 600px;
             margin: 0 auto;
-            background: rgba(26, 39, 66, 0.6);
+            background: rgba(26, 42, 74, 0.4);
             backdrop-filter: blur(10px);
             padding: 2rem;
             border-radius: 15px;
-            border: 1px solid rgba(0, 255, 255, 0.2);
+            border: 1px solid rgba(74, 123, 200, 0.3);
         }
 
         .form-group {
@@ -253,23 +254,23 @@
         label {
             display: block;
             margin-bottom: 0.5rem;
-            color: #00ffff;
+            color: #4a7bc8;
         }
 
         input, textarea {
             width: 100%;
             padding: 0.8rem;
-            background: rgba(10, 22, 40, 0.8);
-            border: 1px solid rgba(0, 255, 255, 0.3);
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(74, 123, 200, 0.4);
             border-radius: 8px;
-            color: #fff;
+            color: #ffffff;
             font-family: inherit;
         }
 
         input:focus, textarea:focus {
             outline: none;
-            border-color: #00ffff;
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+            border-color: #4a7bc8;
+            box-shadow: 0 0 10px rgba(74, 123, 200, 0.5);
         }
 
         textarea {
@@ -280,8 +281,8 @@
         .submit-button {
             width: 100%;
             padding: 1rem;
-            background: linear-gradient(135deg, #00ffff, #0099ff);
-            color: #0a1628;
+            background: linear-gradient(135deg, #4a7bc8, #6a9bdb);
+            color: #000000;
             border: none;
             border-radius: 8px;
             font-weight: bold;
@@ -292,15 +293,15 @@
 
         .submit-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(0, 255, 255, 0.4);
+            box-shadow: 0 5px 20px rgba(74, 123, 200, 0.5);
         }
 
         footer {
             position: relative;
             text-align: center;
             padding: 2rem;
-            background: rgba(10, 22, 40, 0.95);
-            border-top: 1px solid rgba(0, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.95);
+            border-top: 1px solid rgba(74, 123, 200, 0.3);
             z-index: 1;
         }
 
@@ -340,7 +341,7 @@
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background: rgba(10, 22, 40, 0.98);
+                background: rgba(0, 0, 0, 0.98);
                 flex-direction: column;
                 padding: 2rem;
                 gap: 1.5rem;
@@ -385,12 +386,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="logo-container">
-                <svg width="250" height="250" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="125" cy="125" r="100" fill="none" stroke="#00ffff" stroke-width="3" opacity="0.3"/>
-                    <circle cx="125" cy="125" r="70" fill="none" stroke="#00ffff" stroke-width="2" opacity="0.5"/>
-                    <circle cx="125" cy="125" r="40" fill="#00ffff" opacity="0.8"/>
-                    <path d="M125 25 L145 85 L205 85 L155 125 L175 185 L125 145 L75 185 L95 125 L45 85 L105 85 Z" fill="#0099ff" opacity="0.6"/>
-                </svg>
+                <img src="logo.png" alt="Galacctis Websites Logo">
             </div>
             <h1>GALACCTIS WEBSITES</h1>
             <p class="tagline">We Make Websites. Beautiful. Fast. Effective.</p>
